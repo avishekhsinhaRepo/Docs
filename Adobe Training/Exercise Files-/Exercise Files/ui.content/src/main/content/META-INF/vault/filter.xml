@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workspaceFilter version="1.0">
+    
+    <filter root="/conf/we-train" />
+    
+    <!-- 3 Templates -->
+    <filter root="/conf/we-train/settings/wcm/templates/content-page" />
+	<filter root="/conf/we-train/settings/wcm/templates/sidebar-page-template" />
+	<filter root="/conf/we-train/settings/wcm/templates/stock-page-template" />
+	
+	<!-- Empty Template-type -->
+	<filter root="/conf/we-train/settings/wcm/template-types/jcr:content" />
+	<filter root="/conf/we-train/settings/wcm/template-types/empty-page" />
+	
+	<!-- Adobe Component Policies -->
+	<filter root="/conf/we-train/settings/wcm/policies/wcm/foundation/components/page" />
+	<filter root="/conf/we-train/settings/wcm/policies/wcm/foundation/components/responsivegrid" />
+	
+	<!-- Content Component Policies -->
+	<filter root="/conf/we-train/settings/wcm/policies/training/components/content/image" />
+	<filter root="/conf/we-train/settings/wcm/policies/training/components/content/stockplex" />
+	<filter root="/conf/we-train/settings/wcm/policies/training/components/content/carousel" />
+	<filter root="/conf/we-train/settings/wcm/policies/training/components/content/teaser" />
+	
+	<!-- Structure Component Policies -->
+	<filter root="/conf/we-train/settings/wcm/policies/training/components/structure/page" />
+	<filter root="/conf/we-train/settings/wcm/policies/training/components/structure/footer" />
+	<filter root="/conf/we-train/settings/wcm/policies/training/components/structure/languagenavigation" />
+	<filter root="/conf/we-train/settings/wcm/policies/training/components/structure/search" />
+	
+	<!-- Core Components Demo -->
+	<filter root="/conf/we-train/settings/wcm/template-types/empty-experience-fragment" />
+	<filter root="/conf/we-train/settings/wcm/templates/experience-fragment---web" />
+	<filter root="/content/experience-fragments/site_fragments" />
+    
+    
+    <filter root="/content/we-train"/>
+    <filter root="/content/dam/we-train"/>
+    <filter root="/content/hello-world"/>
+    
+</workspaceFilter>

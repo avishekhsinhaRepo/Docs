@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    xmlns:jcr="http://www.jcp.org/jcr/1.0" jcr:primaryType="sling:OsgiConfig"
+    tracerSets="[oak-query : org.apache.jackrabbit.oak.query.QueryEngineImpl;level=debug ,oak-writes : org.apache.jackrabbit.oak.jcr.operations.writes;level=trace]"
+    enabled="{Boolean}true"
+    servletEnabled="{Boolean}true"
+    recordingCacheSizeInMB="50"
+    recordingCacheDurationInSecs="900"
+    recordingCompressionEnabled="{Boolean}true"
+    gzipResponse="{Boolean}true"
+    />

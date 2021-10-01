@@ -1,0 +1,48 @@
+<h3>My Quote Component</h3>
+
+<!--/* Tests to see if the author added a quote into the dialog */-->
+<blockquote data-sly-test="${properties.myQuote}">
+	${properties.myQuote}
+</blockquote>
+
+<!--/* jcr:title property is inherited from the core title dialog box */-->
+<p data-sly-test="${properties.jcr:title}">
+	― ${properties.jcr:title}
+</p>
+
+<h4>
+	<a href="https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/javadoc/org/apache/sling/api/SlingHttpServletRequest.html">Request Object API</a>
+	(request)
+</h4>
+<blockquote>
+	<p>request Path: ${request.resource.path}</p>
+	<p>request resourceType: ${resource.resourceType}</p>
+</blockquote>
+
+<h4>  
+	<a href="https://sling.apache.org/apidocs/sling7/org/apache/sling/api/resource/Resource.html">Resource Object API</a>
+	(resource)
+</h4>
+<blockquote>
+	<p>resource Path: ${resource.path}</p>
+</blockquote>
+
+<h4>
+	<a href="https://sling.apache.org/apidocs/sling7/org/apache/sling/api/resource/ResourceResolver.html">ResourceResolver Object API</a>
+	(resourceResolver)
+</h4>
+<blockquote>
+	<p>resourceResolver Component Path: ${resourceResolver.findResource @ path=resource.resourceType}</p>
+</blockquote>
+
+<h4>
+	<a href="https://helpx.adobe.com/experience-manager/6-3/sites/developing/using/reference-materials/javadoc/com/day/cq/wcm/api/Page.html">Page Object API</a>
+	(currentPage)
+</h4>
+<blockquote>
+	<p>currentPage Name: ${currentPage.Name}</p>
+	<p>currentPage Title: ${currentPage.Title}</p>
+	<p>currentPage Parent: ${currentPage.parent.Title}</p>
+	<p>currentPage Path: ${currentPage.Path}</p>
+	<p>currentPage Depth: ${currentPage.Depth}</p>
+</blockquote>

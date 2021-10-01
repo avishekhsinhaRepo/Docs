@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:template="/conf/we-train/settings/wcm/templates/stock-page-template"
+        jcr:primaryType="cq:PageContent"
+        sling:resourceType="training/components/structure/page">
+        <root
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="wcm/foundation/components/responsivegrid">
+            <stockplex
+                jcr:created="{Date}2020-02-05T14:55:06.143-05:00"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2020-02-05T14:55:08.117-05:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="training/components/content/stockplex"/>
+            <responsivegrid
+                jcr:created="{Date}2020-02-05T14:55:11.342-05:00"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2020-02-05T14:55:15.361-05:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="wcm/foundation/components/responsivegrid"/>
+        </root>
+    </jcr:content>
+</jcr:root>

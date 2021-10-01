@@ -1,0 +1,39 @@
+<!--/* 
+The first five lines determine if an image has been uploaded via the dialog
+
+Although this logic is possible with HTL, it could be hard to read for a
+web developer. In the next iteration of this HTL code, a Sling Model will be used
+to simplify the markup.
+
+Asset uploaded through the dialog box is uploaded to ~/page/../hero/file node
+An Asset from the DAM (drag and drop) is saved as a property called fileReference 
+*/-->
+
+<sly data-sly-test.imagePath="${properties.fileReference}"/>
+<sly data-sly-test.hasImageUpload="${resource.hasChildren}">
+    <sly data-sly-set.uploadPath="${resource.path}/file"/>
+    <sly data-sly-test.imagePath="${properties.fileReference || uploadPath}"/>
+</sly>
+
+<div data-sly-use.template="core/wcm/components/commons/v1/templates.html"
+     data-sly-test.hasContent="${imagePath}"
+     class="cmp-hero">
+    
+    <div class="cmp-teaser">
+        <div class="cmp-teaser__image">
+            <img class="cmp-image__image" src="${imagePath}" itemprop="contentUrl" data-cmp-hook-image="image" alt="${properties.alt}">
+        </div>
+        <!--/* Content that will be displayed if it's set in the dialog */-->
+        <div class="cmp-teaser__content">
+            <h2 class="cmp-teaser__title">${properties.jcr:title}</h2>
+            <div class="cmp-teaser__description">${properties.heading}</div>
+
+            <p class="cmp-teaser__action-container" data-sly-test="${properties.buttonLabel && properties.buttonLinkTo}">
+                <a class="cmp-teaser__action-link" href="${properties.buttonLinkTo @ extension = 'html'}">${properties.buttonLabel}</a>
+            </p>
+        </div>
+    </div>
+</div>
+
+<!--/* component placeholder */-->
+<sly data-sly-call="${template.placeholder @ isEmpty=!hasContent}"></sly>

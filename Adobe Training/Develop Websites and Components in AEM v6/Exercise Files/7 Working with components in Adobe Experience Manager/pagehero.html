@@ -1,0 +1,30 @@
+<!--/*
+This is the exact same code as the pure HTL example. The difference is
+we are now using a sling model for the business logic. This will allow
+this component to be exported as json for a headless CMS solution.
+
+Make sure you install the we.train.core-0.0.1-SNAPSHOT.jar if you have not already.
+
+*/-->
+ <sly data-sly-use.hero="com.adobe.ats.core.models.Hero">
+
+	<!--/* If imagePath is empty, then a placeholder is shown. */-->
+    <div class="we-HeroImage width-full${!wcmmode.disabled ? ' cq-dd-image' : ''}"
+         style="${hero.style @ context='styleString'}">
+         
+        <!--/* Content that will be displayed if it's set in the dialog */-->
+        <div class="container">
+            <div class="we-HeroImage-wrapper">
+                <p>${hero.heading}</p>
+                <strong class="we-HeroImage-title h1">${hero.title}</strong>
+
+                <p data-sly-test="${hero.buttonLabel && hero.buttonLinkTo}">
+                    <a class="btn btn-primary" href="${hero.buttonLinkTo @ extension = 'html'}" role="button">
+                    ${hero.buttonLabel}
+                    <i class="fa fa-arrow-right" aria-hidden="true"></i>
+                    </a>
+                </p>
+            </div>
+        </div>
+    </div>
+</sly>

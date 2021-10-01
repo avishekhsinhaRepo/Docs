@@ -1,0 +1,32 @@
+<!--/*
+This is the exact same code as the pure HTL example. The difference is
+we are now using a sling model for the business logic. This allows for 
+cleaner presentation and this component can be exported as json 
+for a headless CMS solution.
+
+Make sure you install the we-train-bundle.zip if you have not already.
+
+*/-->
+<div data-sly-use.template="core/wcm/components/commons/v1/templates.html" 
+     data-sly-use.hero="com.adobe.training.wetrain.core.models.Hero"
+     data-sly-test.hasContent="${hero.imagePath}"
+     class="cmp-hero">
+    
+    <div class="cmp-teaser">
+        <div class="cmp-teaser__image">
+            <img class="cmp-image__image" src="${hero.imagePath}" itemprop="contentUrl" data-cmp-hook-image="image" alt="${hero.alt}">
+        </div>
+        <!--/* Content that will be displayed if it's set in the dialog */-->
+        <div class="cmp-teaser__content">
+            <h2 class="cmp-teaser__title">${hero.title}</h2>
+            <div class="cmp-teaser__description">${hero.heading}</div>
+
+            <p class="cmp-teaser__action-container" data-sly-test="${hero.buttonLabel && hero.buttonLinkTo}">
+                <a class="cmp-teaser__action-link" href="${hero.buttonLinkTo @ extension = 'html'}">${hero.buttonLabel}</a>
+            </p>
+        </div>
+    </div>
+</div>
+
+<!--/* component placeholder */-->
+<sly data-sly-call="${template.placeholder @ isEmpty=!hasContent}"></sly>

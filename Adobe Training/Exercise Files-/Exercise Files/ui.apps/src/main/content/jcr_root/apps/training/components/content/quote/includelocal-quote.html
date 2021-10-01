@@ -1,0 +1,14 @@
+<h3>My Quote Component</h3>
+
+<!--/* Tests to see if the author added a quote into the dialog */-->
+<blockquote data-sly-test="${properties.myQuote}">
+	${properties.myQuote}
+</blockquote>
+
+<!--/* jcr:title property is inherited from the core title dialog box */-->
+<p data-sly-test="${properties.jcr:title}">
+	― ${properties.jcr:title}
+</p>
+
+<h3>Local Script Include</h3>
+<blockquote data-sly-include="red.html"></blockquote>

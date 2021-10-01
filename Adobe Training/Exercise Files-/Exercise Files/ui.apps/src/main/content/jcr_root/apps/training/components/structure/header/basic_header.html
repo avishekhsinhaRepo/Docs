@@ -1,0 +1,20 @@
+<div class="cmp-experiencefragment--header">
+    we<strong>TRAIN</strong>
+
+    <!--/* Adds the language navigation core component */-->
+    <div class=""
+        data-sly-resource="${'languagenavigation' @ resourceType='training/components/structure/languagenavigation'}">
+    </div>
+
+    <!--/* Adds the search core component */-->
+    <div class="" data-sly-resource="${'search' @ resourceType='training/components/structure/search'}"></div>
+
+    <!--/****************************************************************** 
+         * Using HTL we can quickly create a list of links for the header *
+         ******************************************************************/-->
+    <ul class="">
+        <li class="" data-sly-repeat="${['Page One','Page Two', 'Page Three','Page Four']}">
+            <a class="cmp-navigation__item-link" href="${'#' @ extension = 'html'}">${item}</a>
+        </li>
+    </ul>
+</div>

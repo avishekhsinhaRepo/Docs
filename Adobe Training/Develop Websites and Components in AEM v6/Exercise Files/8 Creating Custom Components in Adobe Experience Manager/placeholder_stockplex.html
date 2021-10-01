@@ -1,0 +1,8 @@
+<div class="cmp-stockplex" 
+	data-sly-use.template="core/wcm/components/commons/v1/templates.html"
+	data-sly-test.symbol="${properties.symbol}" >
+</div>
+
+<!-- If there is no stock symbol added to the dialog, create a component placeholder -->
+<sly data-sly-call="${template.placeholder @ isEmpty=!symbol, classAppend='cmp-stockplex'}"></sly>
+

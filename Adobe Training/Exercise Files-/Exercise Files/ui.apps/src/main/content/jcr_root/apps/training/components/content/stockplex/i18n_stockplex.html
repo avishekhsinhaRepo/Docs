@@ -1,0 +1,37 @@
+<sly data-sly-use.clientlib="/libs/granite/sightly/templates/clientlib.html" data-sly-call="${clientlib.css @ categories='we.train.stockplex'}" />
+
+<div class="cmp-stockplex" 
+    data-sly-use.template="core/wcm/components/commons/v1/templates.html" 
+    data-sly-test.symbol="${properties.symbol}" 
+    data-sly-use.stockplex="com.adobe.training.core.models.Stockplex">
+
+    <div class="cmp-stockplex__column1">
+        <div class="cmp-stockplex__symbol">${stockplex.symbol}</div>
+        <div class="cmp-stockplex__currentPrice">${'Current Value:' @ i18n} ${stockplex.currentPrice}</div>
+
+
+        <div class="cmp-stockplex__summary" data-sly-test.summary="${stockplex.summary}">
+            <h3>${'Summary:' @ i18n} ${stockplex.summary}</h3>
+        </div>
+
+        <div class="cmp-stockplex__button">
+            <a href="${resource.path @ selectors='model', extension='json'}">
+                <button>${'See this stock via JSON' @ i18n}</button>
+            </a>
+        </div>
+    </div>
+    <div class="cmp-stockplex__column2">
+        <div class="cmp-stockplex__details" data-sly-test="${stockplex.showStockDetails}">
+            <ul data-sly-list.dataKey="${stockplex.data}">
+                <li class="cmp-stockplex__details-item">
+                    <span class="cmp-stockplex__details-title">${dataKey @ i18n}:</span>
+                    <br />
+                    <span class="cmp-stockplex__details-data">${stockplex.data[dataKey]}</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<!-- If there is no stock symbol added to the dialog, create a component placeholder -->
+<sly data-sly-call="${template.placeholder @ isEmpty=!symbol, classAppend='cmp-stockplex'}"></sly>

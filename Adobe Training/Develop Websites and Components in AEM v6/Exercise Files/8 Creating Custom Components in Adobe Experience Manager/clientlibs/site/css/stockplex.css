@@ -1,0 +1,96 @@
+/* Editable styles */ 
+
+.cmp-stockplex--italic {
+	font-style: italic;
+}
+
+.cmp-stockplex--red {
+	color:red;
+}
+
+.cmp-stockplex--bold {
+	font-weight:bold;
+}
+
+.stockplex {
+	overflow: auto;
+	padding: 10px;
+}
+
+/* Fixed component Styles */
+.cmp-stockplex {
+ font-size: 20px;
+ margin: 10px;
+} 
+    
+.cmp-stockplex__column1{
+	width: 33%;
+	float: left;
+}
+.cmp-stockplex__column2 {
+	width: 66%;
+	float: left;
+	padding: 3px 30px;
+}
+
+.cmp-stockplex__symbol {
+    padding-right:40px;
+    font-size:40px;
+}
+.cmp-stockplex__currentPrice {
+    font-size:25px;
+}
+.cmp-stockplex__details ul {
+    list-style-type: none;
+    float: center
+} 
+.cmp-stockplex__details-item{
+	width: 50%;
+	float: left;
+}
+.cmp-stockplex__details-title{
+	font-size: 15px;
+}
+.cmp-stockplex__details-data{
+	font-size: 25px;
+}
+
+.cmp-stockplex__button button:hover {
+ background: #c81017;
+}
+ .cmp-stockplex__button button {
+    background-color: #ed1c24;
+    border: none;
+    color: white;
+    padding: 15px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-weight: 700;
+    font-size: 20px
+}
+
+/* Tablet view */
+@media(max-width: 1200px) {
+	.cmp-stockplex__column1, .cmp-stockplex__column2 {
+		width: 100%;
+		text-align: center;
+	}
+	.cmp-stockplex__symbol, .cmp-stockplex__currentPrice, .cmp-stockplex__summary{
+		width: 100%;
+		padding: 0;
+		float: left;
+	}
+	.cmp-stockplex__details-item{
+		width: 100%;
+		float: left;
+	}
+}
+
+/* Phone view */
+@media(max-width: 650px) {
+ 	.cmp-stockplex__details-item{
+	width: 100%;
+	float: center;
+	} 
+}

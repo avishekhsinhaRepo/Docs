@@ -1,0 +1,34 @@
+/*
+ * This file contains designs that will be applied to 
+ * the component without the style system being used.
+ * The classes used here are hard coded into the component HTL script.
+ * This means the template author will not have control
+ * over these styles within the template and they will be 
+ * applied by default.
+ */
+
+/* css extending the WKND design */
+.cmp-languagenavigation--default {
+    ul.cmp-languagenavigation__group {
+        float: unset;
+    }
+
+    a.cmp-languagenavigation__item-link {
+        font-size: 20px;
+    }
+
+    .cmp-languagenavigation__item--active {
+
+        .cmp-languagenavigation__item-link {
+            color: #ffe72b;
+            font-size: 14px;
+        }
+    }
+}
+
+// /* Extends the static header bar while scrolling */
+.scrolly {
+    .cmp-layoutcontainer--header {
+        height: 120px;
+    }
+}

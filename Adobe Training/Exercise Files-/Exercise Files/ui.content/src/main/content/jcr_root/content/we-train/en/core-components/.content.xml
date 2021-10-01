@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2019-09-13T17:41:33.950-04:00"
+        cq:lastModifiedBy="admin"
+        cq:template="/conf/we-train/settings/wcm/templates/content-page"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Core Components"
+        sling:resourceType="training/components/structure/page">
+        <root
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="wcm/foundation/components/responsivegrid">
+            <responsivegrid
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="wcm/foundation/components/responsivegrid">
+                <title
+                    jcr:created="{Date}2019-01-23T21:44:33.967-05:00"
+                    jcr:createdBy="admin"
+                    jcr:lastModified="{Date}2019-01-23T21:44:48.792-05:00"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    jcr:title="Learn About Core Components"
+                    sling:resourceType="training/components/content/title"/>
+                <tabs
+                    jcr:created="{Date}2019-01-23T21:30:39.991-05:00"
+                    jcr:createdBy="admin"
+                    jcr:lastModified="{Date}2019-01-23T21:40:44.359-05:00"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="training/components/content/tabs">
+                    <item_1
+                        cq:panelTitle="Benefits"
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Tab 1"
+                        sling:resourceType="wcm/foundation/components/responsivegrid">
+                        <text
+                            jcr:created="{Date}2019-01-23T21:30:50.148-05:00"
+                            jcr:createdBy="admin"
+                            jcr:lastModified="{Date}2019-01-23T21:31:14.617-05:00"
+                            jcr:lastModifiedBy="admin"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="training/components/content/text"
+                            text="&lt;p>The Core Components are:&lt;/p>&#xa;&lt;ul>&#xa;&lt;li>Pre-Configurable - Templates can define how the page authors can use them.&lt;/li>&#xa;&lt;li>Versatile - Authors can create most kind of content with them.&lt;/li>&#xa;&lt;li>Easy-to-Use - Authors can efficiently create and manage content with them.&lt;/li>&#xa;&lt;li>Production-Ready - Usable out-of-the-box! They are robust, well-tested, and perform well.&lt;/li>&#xa;&lt;li>Accessible - They comply WCAG 2.0 standard, provide ARIA labels, and support keyboard navigation.&lt;/li>&#xa;&lt;li>Easy to Style - The components implement the Style System and the markup follows BEM CSS naming.&lt;/li>&#xa;&lt;li>SEO Friendly - The HTML output is semantic and provides schema.org microdata annotations.&lt;/li>&#xa;&lt;li>PWA/SPA/App Ready - Their streamlined JSON output can also be used for client-side rendering.&lt;/li>&#xa;&lt;li>Extensible - To cover custom needs but without starting from scratch, everything can be extended.&lt;/li>&#xa;&lt;li>Open Source - If something is not as it should be, contribute improvements on GitHub (Apache License).&lt;/li>&#xa;&lt;li>Versioned - The core components won’t break your site when improving things that might impact you&lt;/li>&#xa;&lt;/ul>&#xa;"
+                            textIsRich="true"/>
+                        <teaser
+                            jcr:created="{Date}2019-01-23T21:30:54.682-05:00"
+                            jcr:createdBy="admin"
+                            jcr:lastModified="{Date}2019-01-23T21:31:29.606-05:00"
+                            jcr:lastModifiedBy="admin"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="training/components/content/teaser"
+                            actionsEnabled="true"
+                            descriptionFromPage="false"
+                            textIsRich="true"
+                            titleFromPage="false">
+                            <actions jcr:primaryType="nt:unstructured">
+                                <item0
+                                    jcr:primaryType="nt:unstructured"
+                                    link="https://helpx.adobe.com/experience-manager/core-components/using/introduction.html"
+                                    text="Learn more"/>
+                            </actions>
+                        </teaser>
+                    </item_1>
+                    <item_2
+                        cq:panelTitle="Documentation"
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Tab 2"
+                        sling:resourceType="wcm/foundation/components/responsivegrid">
+                        <text
+                            jcr:created="{Date}2019-01-23T21:31:38.806-05:00"
+                            jcr:createdBy="admin"
+                            jcr:lastModified="{Date}2019-01-23T21:31:55.788-05:00"
+                            jcr:lastModifiedBy="admin"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="training/components/content/text"
+                            text="&lt;p>In Adobe Experience Manager, components are the structural elements that constitute the content of the pages being authored. Components have always been a fundamental element of the AEM experience, making page creation simple but powerful for the author and the development of components flexible and extensible for the developer.&lt;/p>&#xa;&lt;p>Core Components were introduced to provide robust and extensible base components, built on the latest technology and best practices, and adhering to accessibility guidelines and are compliant&amp;nbsp;with the WCAG 2.0 AA standard. Core components make page authoring more flexible and customizable, and extending them to offer custom functionality is simple for the developer.&lt;/p>&#xa;"
+                            textIsRich="true">
+                            <cq:responsive jcr:primaryType="nt:unstructured">
+                                <default
+                                    jcr:primaryType="nt:unstructured"
+                                    behavior="none"
+                                    offset="0"
+                                    width="6"/>
+                            </cq:responsive>
+                        </text>
+                        <carousel
+                            cq:styleIds="[1568410836827]"
+                            jcr:created="{Date}2019-01-23T21:33:08.751-05:00"
+                            jcr:createdBy="admin"
+                            jcr:lastModified="{Date}2019-01-23T21:45:58.002-05:00"
+                            jcr:lastModifiedBy="admin"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="training/components/content/carousel"
+                            autopauseDisabled="true"
+                            autoplay="true"
+                            delay="2000">
+                            <cq:responsive jcr:primaryType="nt:unstructured">
+                                <default
+                                    jcr:primaryType="nt:unstructured"
+                                    offset="0"
+                                    width="6"/>
+                            </cq:responsive>
+                            <item_1
+                                cq:panelTitle="Author"
+                                cq:styleIds="[1568410777269]"
+                                jcr:lastModified="{Date}2019-09-13T17:38:09.719-04:00"
+                                jcr:lastModifiedBy="admin"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Teaser 1"
+                                sling:resourceType="training/components/content/teaser"
+                                actionsEnabled="true"
+                                descriptionFromPage="false"
+                                fileReference="/content/dam/we-train/placeholder-image.png"
+                                textIsRich="true"
+                                titleFromPage="true">
+                                <actions jcr:primaryType="nt:unstructured">
+                                    <item0
+                                        jcr:primaryType="nt:unstructured"
+                                        link="https://helpx.adobe.com/experience-manager/core-components/using/authoring.html"
+                                        text="Author Core Components"/>
+                                </actions>
+                            </item_1>
+                            <item_2
+                                cq:panelTitle="Developer"
+                                cq:styleIds="[1560901449115]"
+                                jcr:lastModified="{Date}2019-09-13T17:38:29.487-04:00"
+                                jcr:lastModifiedBy="admin"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Teaser 2"
+                                sling:resourceType="training/components/content/teaser"
+                                actionsEnabled="true"
+                                descriptionFromPage="false"
+                                fileReference="/content/dam/we-train/placeholder-image.png"
+                                textIsRich="true"
+                                titleFromPage="true">
+                                <cq:responsive jcr:primaryType="nt:unstructured">
+                                    <default
+                                        jcr:primaryType="nt:unstructured"
+                                        offset="0"
+                                        width="6"/>
+                                </cq:responsive>
+                                <actions jcr:primaryType="nt:unstructured">
+                                    <item0
+                                        jcr:primaryType="nt:unstructured"
+                                        link="https://helpx.adobe.com/experience-manager/core-components/using/developing.html"
+                                        text="Develop Core Components"/>
+                                </actions>
+                            </item_2>
+                        </carousel>
+                        <tabs_copy jcr:primaryType="nt:unstructured"/>
+                    </item_2>
+                    <item_1548297626966
+                        cq:panelTitle="Training"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="wcm/foundation/components/responsivegrid">
+                        <title
+                            jcr:created="{Date}2019-01-23T21:43:52.565-05:00"
+                            jcr:createdBy="admin"
+                            jcr:lastModified="{Date}2019-01-23T21:44:06.611-05:00"
+                            jcr:lastModifiedBy="admin"
+                            jcr:primaryType="nt:unstructured"
+                            jcr:title="Sign up today!"
+                            sling:resourceType="training/components/content/title"
+                            type="h3"/>
+                        <container
+                            jcr:created="{Date}2019-01-23T21:40:57.536-05:00"
+                            jcr:createdBy="admin"
+                            jcr:lastModified="{Date}2019-01-23T21:40:57.536-05:00"
+                            jcr:lastModifiedBy="admin"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="training/components/form/container"
+                            action="/content/usergenerated/we-train/en/core-components/cq-gen1548297657539/"
+                            actionType="foundation/components/form/actions/store">
+                            <text
+                                jcr:created="{Date}2019-01-23T21:41:03.218-05:00"
+                                jcr:createdBy="admin"
+                                jcr:lastModified="{Date}2019-01-23T21:43:07.148-05:00"
+                                jcr:lastModifiedBy="admin"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Name"
+                                sling:resourceType="training/components/form/text"
+                                name="name"
+                                rows="2"
+                                type="text"/>
+                            <text_1285996829
+                                jcr:created="{Date}2019-01-23T21:41:05.749-05:00"
+                                jcr:createdBy="admin"
+                                jcr:lastModified="{Date}2019-01-23T21:43:17.006-05:00"
+                                jcr:lastModifiedBy="admin"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Email"
+                                sling:resourceType="training/components/form/text"
+                                name="email"
+                                rows="2"
+                                type="text"/>
+                            <options
+                                jcr:created="{Date}2019-01-23T21:41:09.664-05:00"
+                                jcr:createdBy="admin"
+                                jcr:lastModified="{Date}2019-01-23T21:43:42.884-05:00"
+                                jcr:lastModifiedBy="admin"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Audience"
+                                sling:resourceType="training/components/form/options"
+                                name="audience"
+                                source="local"
+                                type="checkbox">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <item0
+                                        jcr:primaryType="nt:unstructured"
+                                        selected="false"
+                                        text="Author"
+                                        value="author"/>
+                                    <item1
+                                        jcr:primaryType="nt:unstructured"
+                                        selected="false"
+                                        text="Developer"
+                                        value="developer"/>
+                                </items>
+                            </options>
+                            <separator
+                                jcr:created="{Date}2019-01-23T21:41:14.086-05:00"
+                                jcr:createdBy="admin"
+                                jcr:lastModified="{Date}2019-01-23T21:41:14.086-05:00"
+                                jcr:lastModifiedBy="admin"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="training/components/content/separator"/>
+                            <button
+                                jcr:created="{Date}2019-01-23T21:41:20.813-05:00"
+                                jcr:createdBy="admin"
+                                jcr:lastModified="{Date}2019-01-23T21:41:20.813-05:00"
+                                jcr:lastModifiedBy="admin"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="training/components/form/button"/>
+                        </container>
+                    </item_1548297626966>
+                </tabs>
+            </responsivegrid>
+        </root>
+        <image jcr:primaryType="nt:unstructured">
+            <file/>
+        </image>
+    </jcr:content>
+</jcr:root>

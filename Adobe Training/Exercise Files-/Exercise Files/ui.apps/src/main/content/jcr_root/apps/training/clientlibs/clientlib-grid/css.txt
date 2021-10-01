@@ -1,0 +1,6 @@
+
+# Loads the default AEM grid system, there are no modifications to this grid but including
+# it into your clientlibs allows for responsive variables to be configured.
+# The original grid system is located under /libs/wcm/foundation/components/page/responsive/css/base.less
+
+less/grid.less

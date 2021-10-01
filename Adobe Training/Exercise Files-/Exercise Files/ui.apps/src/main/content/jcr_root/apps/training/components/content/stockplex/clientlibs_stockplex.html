@@ -1,0 +1,59 @@
+<sly data-sly-use.clientlib="/libs/granite/sightly/templates/clientlib.html" data-sly-call="${clientlib.css @ categories='we.train.stockplex'}" />
+
+<div class="cmp-stockplex" data-sly-use.template="core/wcm/components/commons/v1/templates.html" data-sly-test.symbol="${properties.symbol}">
+
+    <div class="cmp-stockplex__column1">
+        <div class="cmp-stockplex__symbol">${properties.symbol}</div>
+        <div class="cmp-stockplex__currentPrice">Current Value: 300</div>
+
+        <div class="cmp-stockplex__summary" data-sly-test.summary="${properties.summary}">
+            <h3>Summary: ${properties.summary}</h3>
+        </div>
+
+        <div class="cmp-stockplex__button">
+            <a href="#">
+                <button>Placeholder</button>
+            </a>
+        </div>
+    </div>
+
+    <div class="cmp-stockplex__column2">
+        <div class="cmp-stockplex__details" data-sly-test.summary="${properties.showStockDetails}">
+            <ul>
+                <li class="cmp-stockplex__details-item">
+                    <span class="cmp-stockplex__details-title">Request Date:</span>
+                    <br />
+                    <span class="cmp-stockplex__details-data">November 13, 2018</span>
+                </li>
+                <li class="cmp-stockplex__details-item">
+                    <span class="cmp-stockplex__details-title">Open Price:</span>
+                    <br />
+                    <span class="cmp-stockplex__details-data">300</span>
+                </li>
+                <li class="cmp-stockplex__details-item">
+                    <span class="cmp-stockplex__details-title">Range High:</span>
+                    <br />
+                    <span class="cmp-stockplex__details-data">303</span>
+                </li>
+                <li class="cmp-stockplex__details-item">
+                    <span class="cmp-stockplex__details-title">Range Low:</span>
+                    <br />
+                    <span class="cmp-stockplex__details-data">299</span>
+                </li>
+                <li class="cmp-stockplex__details-item">
+                    <span class="cmp-stockplex__details-title">Close:</span>
+                    <br />
+                    <span class="cmp-stockplex__details-data">303</span>
+                </li>
+                <li class="cmp-stockplex__details-item">
+                    <span class="cmp-stockplex__details-title">Volume:</span>
+                    <br />
+                    <span class="cmp-stockplex__details-data">30000</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<!-- If there is no stock symbol added to the dialog, create a component placeholder -->
+<sly data-sly-call="${template.placeholder @ isEmpty=!symbol, classAppend='cmp-stockplex'}"></sly>

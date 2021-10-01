@@ -1,0 +1,83 @@
+<blockquote>
+    Learn more about these HTL attributes in the 
+    <a href="https://github.com/Adobe-Marketing-Cloud/htl-spec/blob/master/SPECIFICATION.md">HTL specification</a> <br/>
+</blockquote>
+<h3>My Quote Component</h3>
+
+<!--/* Tests to see if the author added a quote into the dialog */-->
+<!--/* Save a value in a variable */-->
+<!--/* Change HTML element type dynamically */-->
+<div 
+	data-sly-set.phrase="${properties.myQuote}"
+	data-sly-element="blockquote"
+	data-sly-test="${phrase}">
+	${phrase}
+</div>
+
+<!--/* jcr:title property is inherited from the core title dialog box */-->
+<!--/* The Boolean function data-sly-test saves value in an (optional) identifier */-->
+<p data-sly-test.quotee="${properties.jcr:title}">
+    - ${quotee}
+</p>
+
+<h3>My Quote Component with Default content</h3>
+
+<!--/* Tests, if the author added a quote, otherwise provides a default */-->
+<!--/* data-sly-text sets the element value */-->
+<!--/* data-sly-attribute only is printed, if a attribute value exists */-->
+<blockquote
+    data-sly-text="${properties.myQuote ? properties.myQuote : 'No quote specificed' }"
+    data-sly-attribute.cite="${properties.cite}">
+        Dummy text, which will be overwritten by data-sly-text
+</blockquote>
+ <!--/* Dummy text is not required when using data-sly-text */-->
+<p data-sly-text="${quotee ? quotee : '- Who said this quote' }"></p>
+
+<h3>Other HTL Examples</h3>
+
+<sly data-sly-use.rootPage="${currentPage.path}" />
+<h4>Ex 1: Child resources of ${rootPage.name}</h4>
+<blockquote>
+	In this example we use the resource ${rootPage.path}<br/>
+	Learn more about the 
+	<a href="https://sling.apache.org/apidocs/sling7/org/apache/sling/api/resource/Resource.html">Resource API</a><br/>
+</blockquote>
+<ul data-sly-list=${rootPage.listChildren}>
+	<li >
+      ${item.name}
+    </li>
+</ul>
+
+<h4 data-sly-use.jcrContent="${rootPage.path}/jcr:content">Ex 2: Child Pages of ${jcrContent.jcr:title}</h4>
+<blockquote>
+	In this example we get the Page Title from the jcr:title property under the jcr:content node.
+    We then use data-sly-test to only list the child pages under the resource.<br/>
+</blockquote>
+<ul data-sly-list=${rootPage.listChildren}>
+	<li data-sly-test="${item.resourceType.toString == 'cq:Page'}">
+      <a data-sly-use.childJcrContent="${item.path}/jcr:content" 
+      		href="${item.path @ extension='html'}">${childJcrContent.jcr:title}</a>
+    </li>
+</ul>
+
+<h4>Ex 3: Sibling Nodes (other components) of the ${currentNode.name} node</h4>
+<blockquote>
+    In this example we use the currentNode object <br/>
+    Learn more about the <a href="https://docs.adobe.com/docs/en/spec/jsr170/javadocs/jcr-2.0/javax/jcr/Node.html">Node API</a><br/>
+</blockquote>
+<ul data-sly-list=${currentNode.parent.nodes}>
+	<li>
+      ${item.name}
+    </li>
+</ul>
+
+<h4>Ex 4: Sibling Pages of ${currentPage.title}</h4>
+<blockquote>
+    In this example we use the currentPage object <br/>
+    learn more about the <a href="https://helpx.adobe.com/experience-manager/6-3/sites/developing/using/reference-materials/javadoc/com/day/cq/wcm/api/Page.html">Page API</a> <br />
+</blockquote>
+<ul data-sly-list=${currentPage.listChildren}>
+	<li>
+      <a href="${item.path @ extension='html'}">${item.title}</a>
+    </li>
+</ul>

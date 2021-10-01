@@ -1,0 +1,93 @@
+{
+
+  "Summary:":
+    "Resumen:",
+
+  "Current Value:":
+    "Valor Actual:",
+
+  "See this stock via JSON":
+    "Ver este stock mediante JSON",
+
+  "52 Week Low":
+    "Mínimo 52 semanas",
+
+  "52 Week High":
+    "Máximo 52 semanas",
+
+  "Sector":
+    "Sector",
+
+  "Company":
+    "Empresa",
+
+  "Volume":
+    "Volumen",
+
+  "Range Low":
+    "Rango Mínimo",
+
+  "Range High":
+    "Rango Máximo",
+
+  "Open Price":
+    "Precio Abierto",
+
+  "Up/Down":
+    "Arriba/Abajo",
+
+  "Request Time":
+    "Hora de Solicitud",
+
+  "Request Date":
+    "Fecha de Solicitud",
+
+  "Account":
+    "Cuenta",
+
+  "&copy; {0} All rights reserved.":
+    "&copy; {0} Todos los derechos reservados.",
+
+  "Print":
+    "Imprimir",
+
+  "Ride to the top":
+    "Sube a la cima",
+
+  "Terms of use & privacy policy":
+    "Términos de uso y política de privacidad",
+
+  "Profile":
+    "Perfil",
+
+  "Messages":
+    "Mensajes",
+
+  "Login":
+    "Acceder",
+
+  "Notifications":
+    "Notificaciones",
+
+  "Log out":
+    "Cerrar Sesión",
+
+  "Toggle Navigation":
+    "Mostrar/Esconder Navegación",
+
+  "Search":
+    "Buscar",
+
+  "Search We.Train":
+    "Buscar en We.Train",
+
+  "Close Search":
+    "Cerrar Búsqueda",
+
+  "Select your Language":
+    "Selecciona tu idioma",
+
+  "Close":
+    "Cerrar"
+
+}

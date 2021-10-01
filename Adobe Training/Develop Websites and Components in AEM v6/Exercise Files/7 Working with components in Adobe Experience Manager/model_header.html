@@ -1,0 +1,129 @@
+<!--/* ------------HTL with Sling Model business logic added------------ */-->
+<sly data-sly-use.header="com.adobe.ats.core.models.Header" />
+<div  class="navbar navbar-inverse navbar-fixed-top hidden-xs hidden-sm">
+    <div class="container-fluid">
+        <ul class="nav navbar-nav navbar-left">
+           <li><a href="#" data-toggle="modal" data-target=".we-LanguageModal" title="${header.rootPath.name}" style="text-transform: uppercase;">
+            	 <i class="fa fa-globe" aria-hidden="true"></i>
+            	 ${header.rootPage.name || 'en'}
+           	</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+            <li data-sly-test.anonymous="${header.anonymous}"><a href="${'#' @ extension = 'html'}">${ 'Login' @ i18n }</a></li>
+            <sly data-sly-test="${!anonymous}">
+	            <li><a href="${'#' @ extension = 'html'}">${ 'Account' @ i18n }</a></li>
+	            <li><a href="${'#' @ extension = 'html'}">${ 'Profile' @ i18n }</a></li>
+	            <li><a href="${'#' @ extension = 'html'}"><i class="fa fa-envelope-o"></i> ${
+	                'Messages' @ i18n }
+	                <span class="badge" id="we-retail-message-count" data-siteurl="#">0</span></a></li>
+	            <li><a href="${'#' @ extension = 'html'}"><i class="fa fa-flag-o"></i> ${ 'Notifications' @ i18n }
+	                <span class="badge" id="we-retail-notification-count" data-siteurl="#">0</span></a></li>
+            	<li><a href="/system/sling/logout.html?resource=${currentPage.path @ extension = 'html'}">${ 'Log out' @ i18n }</a></li>
+            </sly>
+        </ul>
+    </div>
+</div>
+
+<div class="container">
+    <nav class="navbar navbar-inverse navbar-absolute-top">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                    data-target="#we-example-navbar-collapse-inverse" aria-expanded="false">
+                <span class="sr-only">${ 'Toggle navigation' @ i18n }</span>
+                <span class="icon-bar"></span> <span class="icon-bar"></span>
+            </button>
+
+            <button type="button" class="navbar-toggle navbar-toggle-close collapsed" data-toggle="collapse"
+                    data-target="#we-example-navbar-collapse-inverse" aria-expanded="false">
+                <span class="sr-only">${ 'Toggle navigation' @ i18n }</span>
+                <i class="fa fa-close" style="font-size:18px;" aria-hidden="true"></i>
+            </button>
+
+            <a class="navbar-brand" href="${header.rootPage.path  || '#' @ extension = 'html'}">we.<strong>Train</strong></a>
+        </div>
+
+        <!-- /.navbar-header -->
+        <div class="collapse navbar-collapse width" id="we-example-navbar-collapse-inverse">
+            <ul  class="nav navbar-nav navbar-center">
+                <li class="visible-xs visible-sm"><a href="${header.rootPage.path || '#' @ extension = 'html'}">we.<strong class="text-primary">Train</strong></a></li>
+                
+                
+                <!--/* ------------Navigation Business Logic------------ */-->
+                
+                <li data-sly-repeat="${header.rootPage.listChildren}">
+                    <a href="${ item.path @ extension = 'html'}">${item.title}</a>
+					<!--/* ------------Subnavigation Logic------------ */-->
+                    <ul data-sly-list.subitem="${item.listChildren}" class="navbar-nav-subitems">
+                        <li >
+                            <a href="${ subitem.path @ extension = 'html'}">${subitem.title}</a>
+                        </li>
+                    </ul>
+                </li>
+                    
+                <!--/* ------------Extra links in mobile/tablet nav------------ */-->
+                <li class="visible-xs visible-sm divider" role="separator"></li>
+                <li class="visible-xs visible-sm" data-sly-test="${anonymous}"><a href="${'#' @ extension = 'html'}">${ 'Login' @ i18n }</a></li>
+                <li class="visible-xs visible-sm" data-sly-test="${!anonymous}"><a href="/system/sling/logout.html?resource=${currentPage.path @ extension = 'html'}">${ 'Log out' @ i18n }</a></li>
+                <li class="visible-xs visible-sm" data-sly-test="${!anonymous}"><a href="${'#' @ extension = 'html'}">${ 'Profile' @ i18n }</a></li>
+                <li class="visible-xs visible-sm" data-sly-test="${!anonymous}">
+                    <a href="${'#' @ extension = 'html'}" class="visible-xs visible-sm">${ 'Messages' @ i18n }
+                        <span class="badge pull-right">0</span>
+                    </a>
+                </li>
+                <li class="visible-xs visible-sm" data-sly-test="${!anonymous}">
+                    <a href="${'#' @ extension = 'html'}" class="visible-xs visible-sm">${ 'Notifications' @ i18n }
+                        <span class="badge pull-right">0</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <!-- /.navbar-collapse -->
+        <div class="navbar-right-outside">
+            <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#navbar-search">
+                <span class="sr-only">${ 'Search' @ i18n }</span><i class="fa fa-search" aria-hidden="true"></i>
+            </a>
+        </div>
+        <!-- /.navbar-right-outside -->
+        <span class="navbar-shutter"></span>
+    </nav>
+    <!-- /.navbar -->
+    
+    <!-- /.we-SearchModal -->
+    <div class="we-SearchModal modal fade" id="navbar-search" role="dialog" data-color="primary">
+		    <div class="modal-dialog">
+		        <div class="modal-content">
+		            <div class="modal-header">
+		                <span><i class="we-Icon we-Icon--search"></i>${ 'Search We.Train' @ i18n }</span>
+		                <button type="button" class="close" data-dismiss="modal"><span>${ 'Close search' @ i18n }</span><i class="we-Icon we-Icon--close-alt"></i>
+		                </button>
+		            </div>
+		            <div class="modal-body">
+		                <div class="row">
+		                    <div class="col-md-12">
+		                        <sly data-sly-resource="${'./search' @ resourceType='training/components/structure/search'}"></sly>
+		                    </div>
+		                </div>
+		            </div>
+		        </div>
+		    </div>
+		</div>
+		<!-- /.we-SearchModal -->
+		<!-- /.we-LanguageModal -->
+		<div class="we-LanguageModal modal fade" tabindex="-1" role="dialog" data-color="primary">
+		    <div class="modal-dialog modal-center modal-sm">
+		        <div class="modal-content">
+		            <div class="modal-header">
+		                <h3 class="modal-title text-center">${ 'Select your Language' @ i18n }</h3>
+		            </div>
+		            <div class="modal-body">
+		                <sly data-sly-resource="${'./languagenavigation' @ resourceType='training/components/structure/languagenavigation'}"/>
+		            </div>
+		        </div>
+		        <div class="modal-after">
+		            <a href="#" data-dismiss="modal"><i class="we-Icon we-Icon--close-alt"></i> ${ 'Close' @ i18n }</a>
+		        </div>
+		    </div>
+		</div>
+		<!-- /.we-LanguageModal -->
+</div>

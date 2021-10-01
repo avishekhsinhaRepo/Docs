@@ -1,0 +1,11 @@
+String:
+&copy; {0} All rights reserved.
+
+ES:
+&copy; {0} Todos los derechos reservados.
+
+FR:
+&copy; {0} Tous droits réservés.
+
+IT:
+&copy; {0} Tutti i diritti riservati.

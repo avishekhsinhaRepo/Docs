@@ -1,0 +1,157 @@
+AEM:
+*****
+- Web Application
+- CMS (Hybrid):
+		- Traditional CMS (Content Repository, Authoring Environment)
+		- Headless CMS	(Content Repository, Export Capabilities (JSON, XML, TXT....))
+
+*********************************************
+History:
+*********
+- 2006- Jetforms- LiveCycle (Forms + data & Document processing)--> AEM Forms
+					- BPM
+					- Document Processing Engine
+	+ (AEM)				
+
+- 2010- Daysoft
+			- CRX (Content Repository eXtreme)--> JCR APIs
+			- CQ (Traditional CMS)
+
+************************************************
+AEM Variants:
+**************
+1. AEM OSGi--> Light Weight
+				- it has all the all the capabilities of CQ/CRX
+				- it has few capabilities from LiveCycle
+				- it has no denpendencies on Application servers and RDBMS
+Installers:
+**************
+- JAR
+- WAR
+
+2. AEM JEE--> Heavy weight (Processing Server)
+				- it has all the all the capabilities of CQ/CRX
+				- it has all the capabilities from LiveCycle
+				- it has denpendencies on Application servers and RDBMS
+
+Capabilities:
+	- All capabilities of AEM OSGi
+	- BPM
+	- All service and operations available
+				
+****************************************************
+Architecture BuildingBlocks:
+******************************
+1. OSGi
+	- Apache Felix
+2. Apache Sling
+3. JCR API based repositories:
+			- CRX (Daysoft)
+			- Jackrabbit (Apache)
+4. Apache Tika
+
+*****************************************************
+Setup:
+*******
+Run-Modes: (associating some configuration with AEM instance)
+
+- author
+- publish
+- crx3
+- crx3mongo
+- dynamicmedia
+- dynamicmedia_scene7
+
+Startup command:
+*****************
+java -jar <name_of_jar> -r author -p 4502 -gui
+
+*********************************************
+Repository Structure:
+***********************
+- /apps
+	- Will hold all your customizations
+			- components
+			- client libraries
+			- i18n dictionaries
+			- service configurations
+			
+- /bin
+	- use to register servlets
+	
+- /conf
+	- custom workflow models (design-time)
+		(/conf/global/settings/workflow/models)
+	- custom editable templates
+	- custom template types
+	- segments for personalization
+	- Cloud Configuration (integrations)
+	- content fragment models (template)
+
+- /content
+	- Content (assets)
+	- tags (ootb & custom)
+	- Web site structure (pages)
+	- UGC (User Generated Content)
+	- fragments
+	- custom projects
+	- forms
+	- micro-sites (campaigns)
+	
+- /etc
+	- ootb tools & utilities
+	- packages
+
+- /home
+	- user management (Users, Groups, and their attibutes)
+
+- /jcr:system (definitions)
+	- permissions
+	- version storage
+	- node types
+	- all registered namspaces
+
+- /libs
+	- ootb UI/Components/workflows/libraries
+
+- /oak:index
+	- all ootb & custom indexes
+
+ACLs (Access Control Lists):
+*****************************
+- /rep:policy (these policies can be migrated)
+- /rep:repoPolicy (they remain local to a repository)
+
+- /system
+	- dedicated for Jackrabbit
+- /temp
+	- temporary working area for AEM and Sling
+- /var
+	- run-time workflow models (ootb & custom)
+	- workflow instances
+	- audit events
+	- Job Queues (Job Manager)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

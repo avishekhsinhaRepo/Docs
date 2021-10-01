@@ -1,0 +1,29 @@
+Content Rendering(Sling Resource Resolution):
+************************************************
+Example:
+************
+http://localhost:4502/content/hello-world.html
+
+Steps:
+******
+- The request will be intercepted by AEM
+- AEM will forward the request to Sling:
+		- Sling will again forward the request to "Sling Resource Resolver" (SRR):
+				- Decomposition of the URL:
+					- SRR will remove everything which pointing to the server address: /content/hello-world.html
+					- SRR will then remove everything after the first "." towards the end of the remaining URL: /content/hello-world
+				- SRR have validate the existance of the resource (/content/hello-world)
+				- SRR has to find out resource renderer: "sling:resourceType"
+						(training/components/content/quote)
+					- i.) if SRR will get an absolute path: it wil directly reach up to the path
+					- ii.)if SRR will get a relative path: 
+										- /apps
+										- /libs
+				- The next thing is to identify the "Rendering Script":
+						i.).<extension>--> .html
+								- SRR will pick "Default Rendering Script" i.e., a script file that shares the same name as the name of the component
+						ii.).<selector>.<extension>-->.red.html
+								- SRR will pick an exact match to an existing script file name
+						iii.).<selector>.<extension>-->.blue.html (if the selector doesnt exist)
+								- SRR will start truncating selector from left hand side i.e., ".html"
+					

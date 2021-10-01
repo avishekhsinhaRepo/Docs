@@ -1,0 +1,51 @@
+
+<sly data-sly-use.footer="com.adobe.ats.core.models.Footer">
+    <footer class="we-Footer">
+        <div class="container">
+
+            <div class="row">
+
+                <div class="col-md-4">
+                    <div class="we-Logo we-Logo--big">
+                        we.<strong>Train</strong>
+                    </div>
+                </div>
+
+                <div class="row col-md-8 col-xs-12 we-footer-links">
+                    <sly data-sly-list.item="${footer.items}">
+                        <div class="col-lg-2 col-md-2 col-xs-3">
+                            <div class="we-Footer-nav">
+                                <h2 class="h4">
+                                    <a href="${ item.path @ extension = 'html'}">${item.title || item.name}</a>
+                                </h2>
+                            </div>
+                        </div>
+                    </sly>
+                </div>
+
+
+            </div>
+
+            <div class="row we-Footer-section we-Footer-section--sub">
+                <div class="we-Footer-section-item">
+                    <span class="text-uppercase text-muted">${ '&copy; {0} All rights reserved.' @ i18n, format=[footer.currentYear], context="html"}</span>
+                </div>
+                <div class="we-Footer-section-item">
+                    <a href="#" class="text-uppercase text-muted">${ 'Terms of use & privacy policy' @ i18n }</a>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="text-center">
+                        <a href="#top" class="btn btn-primary">
+                        ${ 'Ride to the top' @ i18n }
+                        <i class="fa fa-arrow-up" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </footer>
+</sly>

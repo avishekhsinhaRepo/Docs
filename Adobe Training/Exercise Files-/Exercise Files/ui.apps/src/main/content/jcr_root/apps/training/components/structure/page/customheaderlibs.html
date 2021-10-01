@@ -1,0 +1,17 @@
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+ 
+<!--/* Base Client library for We.Train. 
+     * Includes the AEM grid system, Core Component Clientlibs, We.Train styling
+     */-->    
+<sly data-sly-use.clientLib="/libs/granite/sightly/templates/clientlib.html"
+     data-sly-call="${clientlib.css @ categories='we.train.base'}"/>
+ 
+<!--/* Client libraries for the WKND Design 
+     * We don't include wknd.base since we already include 
+     * the grid system and core component clientlibs
+     */-->
+<sly data-sly-call="${clientlib.css @ categories='wknd.site'}"/>
+<sly data-sly-call="${clientlib.js @ categories='wknd.dependencies'}"/>
+
+<!--/* Load authoring related client libraries for WKND*/-->
+<sly data-sly-test="${wcmmode.preview || wcmmode.edit}" data-sly-call="${clientLib.all @ categories='wknd.author'}"/>

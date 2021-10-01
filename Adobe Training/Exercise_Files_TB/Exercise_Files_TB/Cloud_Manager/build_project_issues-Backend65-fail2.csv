@@ -1,0 +1,9 @@
+File Location,Line Number,Issue,Type,Severity,Effort,Rule,Tags
+com.adobe:training.core:src/main/java/com/adobe/training/core/schedulers/StockImportScheduler.java,139,HttpClient instances should always have socket and connect timeouts,Bug,Critical,15min,CQRules:ConnectionTimeoutMechanism,
+com.adobe:training.core:src/main/java/com/adobe/training/core/servlets/SearchServlet.java,34,"Make ""logger"" transient or serializable.",Code Smell,Critical,30min,squid:S1948,"cwe,serialization"
+com.adobe:training.core:src/main/java/com/adobe/training/core/servlets/CSVPageCreator.java,60,"Make ""logger"" transient or serializable.",Code Smell,Critical,30min,squid:S1948,"cwe,serialization"
+com.adobe:training.core:src/main/java/com/adobe/training/core/servlets/CSVPageCreator.java,63,"Make ""replicator"" transient or serializable.",Code Smell,Critical,30min,squid:S1948,"cwe,serialization"
+com.adobe:training.core:src/main/java/com/adobe/training/core/servlets/PageCreator.java,50,"Make ""replicator"" transient or serializable.",Code Smell,Critical,30min,squid:S1948,"cwe,serialization"
+com.adobe:training.core:src/main/java/com/adobe/training/core/servlets/CSVPageCreator.java,75,Catch a list of specific exception subtypes instead.,Code Smell,Major,15min,squid:S2221,"cwe,error-handling"
+com.adobe:training.core:src/main/java/com/adobe/training/core/AutoAssignACL.java,108,"In catch blocks, you should only log WARN or ERROR messages",Code Smell,Minor,15min,CQRules:CQBP-44---WrongLogLevelInCatchBlock,cqsoftwarequality
+com.adobe:training.core:src/main/java/com/adobe/training/core/servlets/TitleSlingServlet.java,26,Do not hardcode paths using String literals,Code Smell,Minor,10min,CQRules:CQBP-71,cqsoftwarequality

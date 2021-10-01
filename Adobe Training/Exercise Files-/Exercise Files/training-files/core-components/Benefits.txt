@@ -1,0 +1,22 @@
+﻿The Core Components are:
+
+Pre-Configurable - Templates can define how the page authors can use them.
+
+Versatile - Authors can create most kind of content with them.
+
+Easy-to-Use - Authors can efficiently create and manage content with them.
+
+Production-Ready - Usable out-of-the-box! They are robust, well-tested, and perform well.
+
+Accessible - They comply WCAG 2.0 standard, provide ARIA labels, and support keyboard navigation.
+
+Easy to Style - The components implement the Style System and the markup follows BEM CSS naming.
+
+SEO Friendly - The HTML output is semantic and provides schema.org microdata annotations.
+PWA/SPA/App Ready - Their streamlined JSON output can also be used for client-side rendering.
+
+Extensible - To cover custom needs but without starting from scratch, everything can be extended.
+
+Open Source - If something is not as it should be, contribute improvements on GitHub (Apache License).
+
+Versioned - The core components won’t break your site when improving things that might impact you

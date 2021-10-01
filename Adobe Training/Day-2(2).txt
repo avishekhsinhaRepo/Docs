@@ -1,0 +1,70 @@
+HTML Template Language (HTL):
+*******************************
+- This language was developed by Daysoft by the name "Sightly"
+- it was not an opensource
+- Originally developed to include dynamic behavior into web pages
+- The idea was to replace JSPs
+- Ease of use as compare to JSPs
+- Secure as compare to JSPs
+- HTL syntax can be used only with .html scrips and .jsp
+
+Syntax:
+***********
+1. Expressions: to consume Objects exposed by AEM APIs
+${.......}
+	-->properties
+	-->currentPage
+	-->currentNode
+
+2. Block Statements: to add additional logical attributes to your script
+data-sly-<attibute>
+			-->test
+			-->include
+			-->resource
+			-->list
+			
+********************************************************
+Templates:
+***********
+Types:
+	- Static template (deprecated)
+			- these types of templates will have to be developed from CRX using nodes/scripts
+			- /apps/<project_folder/templates
+	- Editable template
+			- they are supported with touch optimized UI
+			- /conf/<project_conf_folder>/settings/wcm/templates
+
+Note: 
+	template-type	--> templates	--> pages
+	--: "template-type" is a template for a "template"
+	-- template-type does not have a UI (touch optimized) support: (must be created from CRX)
+			
+<project_conf_folder>:
+***************************
+- Context Aware Configuration Folder
+
+
+One doubt on previous answer (Proxy component should not be hidden)- Proxy components are anyways meant to be inherited by project specific components - which author will be using for authoring.. Why we need to expose those component 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

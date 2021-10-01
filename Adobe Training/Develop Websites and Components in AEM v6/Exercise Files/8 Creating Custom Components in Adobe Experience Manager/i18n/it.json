@@ -1,0 +1,60 @@
+{
+
+  "Account":
+    "Account",
+
+  "&copy; {0} All rights reserved.":
+    "&copy; {0} Tutti i diritti riservati.",
+
+  "Print":
+    "Stampare",
+
+  "Ride to the top":
+    "Torna all'inizio",
+
+  "Terms of use & privacy policy":
+    "Termini d'uso e politica sulla privacy",
+
+  "Profile":
+    "Profilo",
+
+  "Messages":
+    "Messaggi",
+
+  "Login":
+    "Accesso",
+
+  "Notifications":
+    "Notifiche",
+
+  "Log out":
+    "Disconnettersi",
+
+  "Toggle Navigation":
+    "Attiva/Disattiva la Navigazione",
+
+  "Search":
+    "Ricerca",
+
+  "Search We.Train":
+    "Ricerca We.Train",
+
+  "Close Search":
+    "Chiudi la ricerca",
+
+  "Select your Language":
+    " Seleziona la tua lingua",
+
+  "Close":
+    "Chiudi",
+
+  "Summary:":
+    "Sommario:",
+
+  "Current Value:":
+    "Valore corrente:",
+
+  "See this stock via JSON":
+    "Vedi questo magazzino via JSON"
+
+}

@@ -1,0 +1,41 @@
+<!--/* Using pure HTL we can fully build out the design of the header component 
+	 * without having to worry about the business logic at the design phase */-->
+<div class="cmp-experiencefragment--header">
+	<div class="cmp-layoutcontainer--utility aem-GridColumn aem-GridColumn--default--12">
+		<div class="aem-Grid aem-Grid--12">
+
+			<!--/* Adds the language navigation core component */-->
+			<div class="languagenavigation cmp-languagenavigation--default cmp-languagenavigation--dark cmp-languagenavigation--header 
+								aem-GridColumn aem-GridColumn--offset--default--10 aem-GridColumn--offset--phone--8"
+				data-sly-resource="${'languagenavigation' @ resourceType='training/components/structure/languagenavigation'}">
+			</div>
+		</div>
+	</div>
+	<div class="cmp-layoutcontainer--header">
+		<div class="aem-Grid aem-Grid--12">
+			<!--/* Adds the site logo */-->
+			<div
+				class="wknd-header--logo aem-GridColumn aem-GridColumn--offset--tablet--1 aem-GridColumn--offset--phone--1 aem-GridColumn--tablet--6 aem-GridColumn--default--2">
+				<a href="${'#' @ extension='html'}">we<strong>TRAIN</strong></a>
+			</div>
+
+			<!--/* Adds the site navigation */-->
+			<div class="cmp-navigation--header aem-GridColumn aem-GridColumn--default--8 aem-GridColumn--tablet--3">
+				<nav class="cmp-navigation">
+					<ul class="cmp-navigation__group" data-sly-list="${['Page One','Page Two', 'Page Three','Page Four']}">
+						<!--/****************************************************************** 
+							 * Using HTL we can quickly create a list of links for the header *
+						     ******************************************************************/-->
+						<li class="cmp-navigation__item cmp-navigation__item--level-1 ${item=='Page Two' ? ' cmp-navigation__item--active' : ''}">
+							<a class="cmp-navigation__item-link" href="${'#' @ extension = 'html'}">${item}</a>
+						</li>
+					</ul>
+				</nav>
+			</div>
+
+			<!--/* Adds the search core component */-->
+			<div class="search cmp-search--header aem-GridColumn aem-GridColumn--phone--6 aem-GridColumn--tablet--4 aem-GridColumn--default--2"
+				data-sly-resource="${'search' @ resourceType='training/components/structure/search'}"></div>
+		</div>
+	</div>
+</div>

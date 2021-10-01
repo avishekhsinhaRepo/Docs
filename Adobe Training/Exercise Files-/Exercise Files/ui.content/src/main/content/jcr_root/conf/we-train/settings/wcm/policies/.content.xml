@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:rep="internal"
+    jcr:mixinTypes="[rep:AccessControllable]"
+    jcr:primaryType="cq:Page">
+    <training jcr:primaryType="nt:unstructured">
+        <components jcr:primaryType="nt:unstructured">
+            <structure jcr:primaryType="nt:unstructured">
+                <page jcr:primaryType="nt:unstructured">
+                    <policy_1568408997265
+                        jcr:lastModified="{Date}2019-09-13T17:11:57.688-04:00"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="We.Train Page Policy"
+                        sling:resourceType="wcm/core/components/policy/policy">
+                        <jcr:content jcr:primaryType="nt:unstructured"/>
+                        <cq:styleGroups jcr:primaryType="nt:unstructured">
+                            <item0
+                                cq:styleGroupMultiple="true"
+                                jcr:primaryType="nt:unstructured">
+                                <cq:styles jcr:primaryType="nt:unstructured">
+                                    <item0
+                                        cq:styleClasses="wetrain-page--center"
+                                        cq:styleId="1568409020987"
+                                        cq:styleLabel="Center Text"
+                                        jcr:primaryType="nt:unstructured"/>
+                                </cq:styles>
+                            </item0>
+                        </cq:styleGroups>
+                    </policy_1568408997265>
+                    <policy_540426809397995
+                        jcr:lastModified="{Date}2020-02-05T15:08:09.479-05:00"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="We.Train XF Policy"
+                        sling:resourceType="wcm/core/components/policy/policy"
+                        clientlibs="[wknd.site,we.train.base]">
+                        <jcr:content jcr:primaryType="nt:unstructured"/>
+                    </policy_540426809397995>
+                </page>
+                <search jcr:primaryType="nt:unstructured">
+                    <policy_1568409544981
+                        jcr:lastModified="{Date}2019-09-13T17:20:04.425-04:00"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="We.Train Search Policy"
+                        sling:resourceType="wcm/core/components/policy/policy"
+                        resultsSize="10"
+                        searchRoot="/content/we-train"
+                        searchTermMinimumLength="3">
+                        <jcr:content jcr:primaryType="nt:unstructured"/>
+                    </policy_1568409544981>
+                </search>
+                <footer jcr:primaryType="nt:unstructured">
+                    <policy_1568410129149
+                        jcr:lastModified="{Date}2019-09-13T17:29:26.560-04:00"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="We.Train Footer Policy"
+                        sling:resourceType="wcm/core/components/policy/policy"
+                        pages="[/content/we-train/en/activities,/content/we-train/en/about-us,/content/we-train/en/equipment]">
+                        <jcr:content jcr:primaryType="nt:unstructured"/>
+                    </policy_1568410129149>
+                </footer>
+                <languagenavigation jcr:primaryType="nt:unstructured">
+                    <policy_1568839269469
+                        jcr:lastModified="{Date}2019-09-18T18:21:43.267-04:00"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="We.Train LanguageNav Policy"
+                        sling:resourceType="wcm/core/components/policy/policy"
+                        navigationRoot="/content/we-train"
+                        structureDepth="1">
+                        <jcr:content jcr:primaryType="nt:unstructured"/>
+                    </policy_1568839269469>
+                </languagenavigation>
+            </structure>
+            <content jcr:primaryType="nt:unstructured">
+                <stockplex jcr:primaryType="nt:unstructured">
+                    <policy_1568409759428
+                        jcr:lastModified="{Date}2019-09-17T15:42:06.479-04:00"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="We.Train Stockplex Policy"
+                        sling:resourceType="wcm/core/components/policy/policy">
+                        <jcr:content jcr:primaryType="nt:unstructured"/>
+                        <cq:styleGroups jcr:primaryType="nt:unstructured">
+                            <item0
+                                cq:styleGroupLabel="Font Types"
+                                cq:styleGroupMultiple="true"
+                                jcr:primaryType="nt:unstructured">
+                                <cq:styles jcr:primaryType="nt:unstructured">
+                                    <item0
+                                        cq:styleClasses="cmp-stockplex--italic"
+                                        cq:styleId="1568409847511"
+                                        cq:styleLabel="Italic"
+                                        jcr:primaryType="nt:unstructured"/>
+                                    <item1
+                                        cq:styleClasses="cmp-stockplex--bold"
+                                        cq:styleId="1568409868510"
+                                        cq:styleLabel="Bold"
+                                        jcr:primaryType="nt:unstructured"/>
+                                    <item2
+                                        cq:styleClasses="cmp-stockplex--uppercase"
+                                        cq:styleId="1568409869427"
+                                        cq:styleLabel="Uppercase"
+                                        jcr:primaryType="nt:unstructured"/>
+                                </cq:styles>
+                            </item0>
+                        </cq:styleGroups>
+                    </policy_1568409759428>
+                </stockplex>
+                <teaser jcr:primaryType="nt:unstructured">
+                    <policy_1568410765441
+                        jcr:lastModified="{Date}2020-02-05T15:06:44.325-05:00"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="We.Train Teaser Policy"
+                        sling:resourceType="wcm/core/components/policy/policy">
+                        <jcr:content jcr:primaryType="nt:unstructured"/>
+                        <cq:styleGroups jcr:primaryType="nt:unstructured">
+                            <item0 jcr:primaryType="nt:unstructured">
+                                <cq:styles jcr:primaryType="nt:unstructured">
+                                    <item0
+                                        cq:styleClasses="cmp-teaser--list"
+                                        cq:styleId="1568410777269"
+                                        cq:styleLabel="List"
+                                        jcr:primaryType="nt:unstructured"/>
+                                </cq:styles>
+                            </item0>
+                        </cq:styleGroups>
+                    </policy_1568410765441>
+                </teaser>
+                <carousel jcr:primaryType="nt:unstructured">
+                    <policy_1568410815776
+                        jcr:lastModified="{Date}2020-02-05T15:06:38.399-05:00"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="We.Train Carousel Policy"
+                        sling:resourceType="wcm/core/components/policy/policy"
+                        autopauseDisabled="false"
+                        autoplay="false"
+                        delay="5000">
+                        <jcr:content jcr:primaryType="nt:unstructured"/>
+                        <cq:styleGroups jcr:primaryType="nt:unstructured">
+                            <item0 jcr:primaryType="nt:unstructured">
+                                <cq:styles jcr:primaryType="nt:unstructured">
+                                    <item0
+                                        cq:styleClasses="cmp-carousel--hero"
+                                        cq:styleId="1568410836827"
+                                        cq:styleLabel="Hero"
+                                        jcr:primaryType="nt:unstructured"/>
+                                </cq:styles>
+                            </item0>
+                        </cq:styleGroups>
+                    </policy_1568410815776>
+                </carousel>
+                <image jcr:primaryType="nt:unstructured">
+                    <policy_1568411099927
+                        jcr:lastModified="{Date}2019-09-13T17:46:37.759-04:00"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="We.Train Image Policy"
+                        sling:resourceType="wcm/core/components/policy/policy"
+                        allowedRenditionWidths="1024"
+                        allowUpload="false"
+                        altValueFromDAM="true"
+                        disableLazyLoading="true"
+                        displayPopupTitle="true"
+                        isDecorative="false"
+                        jpegQuality="{Long}100"
+                        titleValueFromDAM="true"
+                        uuidDisabled="true">
+                        <jcr:content jcr:primaryType="nt:unstructured"/>
+                        <plugins jcr:primaryType="nt:unstructured">
+                            <crop
+                                jcr:primaryType="nt:unstructured"
+                                features="*">
+                                <aspectRatios jcr:primaryType="nt:unstructured">
+                                    <item0
+                                        jcr:primaryType="nt:unstructured"
+                                        name="Wide Landscape"
+                                        ratio="0.6180"/>
+                                    <item1
+                                        jcr:primaryType="nt:unstructured"
+                                        name="Landscape"
+                                        ratio="0.8284"/>
+                                    <item2
+                                        jcr:primaryType="nt:unstructured"
+                                        name="Square"
+                                        ratio="1"/>
+                                    <item3
+                                        jcr:primaryType="nt:unstructured"
+                                        name="Portrait"
+                                        ratio="1.6180"/>
+                                </aspectRatios>
+                            </crop>
+                            <rotate
+                                jcr:primaryType="nt:unstructured"
+                                features="right"/>
+                            <flip
+                                jcr:primaryType="nt:unstructured"
+                                features="-"/>
+                        </plugins>
+                    </policy_1568411099927>
+                </image>
+            </content>
+        </components>
+    </training>
+    <wcm jcr:primaryType="nt:unstructured">
+        <foundation jcr:primaryType="nt:unstructured">
+            <components jcr:primaryType="nt:unstructured">
+                <responsivegrid jcr:primaryType="nt:unstructured">
+                    <policy_502489957324181
+                        jcr:lastModified="{Date}2020-02-05T15:06:30.669-05:00"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="We.Train Content Policy"
+                        sling:resourceType="wcm/core/components/policy/policy"
+                        components="[/libs/dam/cfm/components/contentfragment,/libs/cq/experience-fragments/editor/components/experiencefragment,/libs/wcm/foundation/components/responsivegrid,group:We.Train,/apps/training/components/content/quote]">
+                        <jcr:content jcr:primaryType="nt:unstructured"/>
+                    </policy_502489957324181>
+                    <policy_502489966859245
+                        jcr:lastModified="{Date}2019-09-13T17:18:42.165-04:00"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="We.Train Structure Policy"
+                        sling:resourceType="wcm/core/components/policy/policy"
+                        components="[/libs/dam/cfm/components/contentfragment,/libs/cq/experience-fragments/editor/components/experiencefragment,/libs/wcm/foundation/components/responsivegrid,group:We.Train,group:We.Train.Structure]">
+                        <jcr:content jcr:primaryType="nt:unstructured"/>
+                    </policy_502489966859245>
+                </responsivegrid>
+                <page jcr:primaryType="nt:unstructured">
+                    <jcr:content
+                        jcr:primaryType="nt:unstructured"
+                        mergeList="{Boolean}true"/>
+                    <default
+                        jcr:description="Policy of the default page"
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Default Page"
+                        sling:resourceType="wcm/core/components/policy/policy"
+                        clientlibs="[wcm.foundation.components.page.responsive]">
+                        <jcr:content
+                            jcr:primaryType="nt:unstructured"
+                            mergeList="{Boolean}true"/>
+                    </default>
+                </page>
+            </components>
+        </foundation>
+    </wcm>
+</jcr:root>

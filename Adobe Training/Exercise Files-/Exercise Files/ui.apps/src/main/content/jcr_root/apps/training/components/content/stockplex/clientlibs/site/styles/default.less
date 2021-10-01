@@ -1,0 +1,91 @@
+/*
+ * This file contains designs that will be applied to 
+ * the component without the style system being used.
+ * The classes used here are hard coded into the component HTL script.
+ * This means the template author will not have control
+ * over these styles within the template and they will be 
+ * applied by default.
+ */
+
+.cmp-stockplex {
+    overflow: auto;
+    padding: 10px;
+    font-size: 20px;
+    margin: 10px;
+
+}
+
+/* Stock Info Column */
+.cmp-stockplex__column1 {
+    width: 33%;
+    float: left;
+}
+.cmp-stockplex__symbol {
+    padding-right: 40px;
+    font-size: 40px;
+}
+.cmp-stockplex__currentPrice {
+    font-size: 25px;
+}
+.cmp-stockplex__button button:hover {
+    background: #fff28c;
+    border: none;
+}
+.cmp-stockplex__button button {
+    background-color: #ffe72b;
+    font-size: 16px;
+    border-bottom-width: medium;
+    border-right-width: medium;
+    border-color: #a8981d;
+    padding: .75em 3.5em;
+    font-weight: 700;
+}
+
+/* Details column */
+.cmp-stockplex__column2 {
+    width: 66%;
+    float: left;
+}
+.cmp-stockplex__details ul {
+    list-style-type: none;
+}
+.cmp-stockplex__details-item {
+    width: 50%;
+    float: left;
+}
+.cmp-stockplex__details-title {
+    font-size: 15px;
+}
+.cmp-stockplex__details-data {
+    font-size: 25px;
+}
+
+/* Tablet view */
+@media(max-width: 1200px) {
+
+    .cmp-stockplex__column1,
+    .cmp-stockplex__column2 {
+        width: 100%;
+        text-align: center;
+    }
+
+    .cmp-stockplex__symbol,
+    .cmp-stockplex__currentPrice,
+    .cmp-stockplex__summary {
+        width: 100%;
+        padding: 0;
+        float: left;
+    }
+
+    .cmp-stockplex__details ul {
+        clear: left;
+        padding-left: 0px;
+    }
+}
+
+/* Phone view */
+@media(max-width: 650px) {
+    .cmp-stockplex__details-item {
+        width: 100%;
+    }
+}

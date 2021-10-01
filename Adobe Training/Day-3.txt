@@ -1,0 +1,55 @@
+Client Libraries:
+********************
+- /apps/<project_folder>
+			- <parent_folder_for_clientlibs>					nt:folder
+					- <clientlib1>								cq:ClientLibraryFolder
+															categories		String[]		(Required)
+															allowProxy		Boolean			(Optional)
+															embed			String[]		(Optional)
+													dependencies	String[]   		(Optional)			
+					
+						- css									nt:folder
+							- a.css								nt:file
+							- b.css
+							- c.css
+						- js
+							- x.js								nt:file
+							- y.js
+							- z.js
+						
+						- css.txt								nt:file
+							#base=css
+							c.css
+							a.css
+							b.css
+						- js.txt								nt:file
+							#base=js
+							z.js
+							x.js
+							y.js
+						
+Result:
+***********					
+	- clientlib1.css
+	- clientlib1.js
+	
+categories		String[]		(Required):
+**********************************************
+1. adobe_clientlib			[adobe, training]
+
+2. sing_clientlib			[singapore, training]
+
+
+
+
+
+
+
+
+
+
+
+						
+						
+						
+						

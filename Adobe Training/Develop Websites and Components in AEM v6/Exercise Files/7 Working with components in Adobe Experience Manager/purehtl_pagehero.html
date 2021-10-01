@@ -1,0 +1,29 @@
+<!--/* 
+The first two lines determine if an image has been uploaded via the dialog
+First preference is an asset dragged and dropped from the Side Panel.
+
+Asset uploaded through the dialog box is uploaded to ~/page/../pagehero/file node
+An Asset from the DAM (drag and drop) is saved as a property called fileReference 
+*/-->
+<sly data-sly-test.imageUpload="${'{0}{1}' @ format=[resource.path, '/file']}"/>
+<sly data-sly-test.imagePath="${properties.fileReference || imageUpload}"/>
+
+	<!--/* If imagePath is empty, then a placeholder is shown. */-->
+	<div class="we-HeroImage width-full${!wcmmode.disabled ? ' cq-dd-image' : ''}"
+   		 style="${'background-image:url({0});' @ format = imagePath, context='styleString' }">
+
+		<!--/* Content that will be displayed if it's set in the dialog */-->
+		<div class="container">
+            <div class="we-HeroImage-wrapper">
+                <p>${hero.heading}</p>
+                <strong class="we-HeroImage-title h1">${properties.jcr:title}</strong>
+
+                <p data-sly-test="${properties.buttonLabel && properties.buttonLinkTo}">
+                    <a class="btn btn-primary" href="${properties.buttonLinkTo @ extension = 'html'}" role="button">
+                    ${properties.buttonLabel}
+                    <i class="fa fa-arrow-right" aria-hidden="true"></i>
+                    </a>
+                </p>
+            </div>
+        </div>
+    </div>

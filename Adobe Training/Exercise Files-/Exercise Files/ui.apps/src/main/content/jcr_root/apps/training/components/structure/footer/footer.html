@@ -1,0 +1,46 @@
+<!--/* Simple print button that inserts a print selector into the request.
+     * Allows the structure/page/print.html script to be called  */-->
+<div class="cmp-teaser aem-GridColumn aem-GridColumn--default--12 cmp-layout-container--fixed">
+    <a class="cmp-teaser__action-link" href="${currentPage.Path @ selectors='print', extension='html'}">
+        ${ 'Print' @ i18n } <i class="fa fa-print" aria-hidden="true"></i>
+    </a>
+</div>
+
+<div class="cmp-experiencefragment--footer" data-sly-use.footer="com.adobe.training.wetrain.core.models.Footer">
+    <div class="cmp-layoutcontainer--footer cmp-layout-container--fixed ">
+        <!--/* Inserts a print selector into the request so that the page/print.html script can be run. */-->
+
+        <div class="cmp-footer-container aem-Grid aem-Grid--12">
+            <div
+                class="wknd-header--logo aem-GridColumn aem-GridColumn--offset--tablet--1 aem-GridColumn--offset--phone--1 aem-GridColumn--tablet--6 aem-GridColumn--default--2">
+                <a href="${header.rootPage.path @ extension='html'}">we<strong>TRAIN</strong></a>
+            </div>
+
+            <!--/* Navigation is determined by the Footer Model and the footer content policy */-->
+            <div
+                class="navigation cmp-navigation--footer  aem-GridColumn--default--none aem-GridColumn--phone--none aem-GridColumn--tablet--none aem-GridColumn--phone--8 aem-GridColumn aem-GridColumn--tablet--8 aem-GridColumn--default--6 aem-GridColumn--offset--phone--1 aem-GridColumn--offset--default--1 aem-GridColumn--offset--tablet--1">
+                <div class="cmp-navigation--footer">
+                    <nav class="cmp-navigation">
+                        <ul class="cmp-navigation__group" data-sly-list="${footer.items}">
+                            <li class="cmp-navigation__item cmp-navigation__item--level-1">
+                                <a class="cmp-navigation__item-link"
+                                    href="${ item.path @ extension = 'html'}">${item.title ||
+                                    item.name}</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+
+        </div>
+
+        <!--/* Copyright statement with i18n. i18n will be discussed with a different component */-->
+        <div class="cmp-text--font-xsmall aem-GridColumn aem-GridColumn--default--12">
+                <p>
+                    ${ '&copy; {0} All rights reserved.' @ i18n, format=[footer.currentYear],
+                    context="html"}
+                    <a href="#">${ 'Terms of use & privacy policy' @ i18n }</a>
+                </p>
+        </div>
+    </div>
+</div>

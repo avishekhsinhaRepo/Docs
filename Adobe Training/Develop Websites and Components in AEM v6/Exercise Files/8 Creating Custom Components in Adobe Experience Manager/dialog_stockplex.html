@@ -1,0 +1,33 @@
+<div class="cmp-stockplex" 
+	data-sly-use.template="core/wcm/components/commons/v1/templates.html"
+	data-sly-test.symbol="${properties.symbol}" >
+	
+	<div class="cmp-stockplex__symbol">${properties.symbol}</div>
+	<div class="cmp-stockplex__currentPrice">Current Value: 300</div>
+
+	  <div data-sly-test.summary="${properties.summary}">
+	      <h3>Summary: ${properties.summary}</h3>
+	  </div>
+	
+	  <div class="cmp-stockplex__button">
+	      <a href="#">
+	        <button>Placeholder</button>
+	      </a>
+	  </div>
+	    	
+		<div class="cmp-stockplex__details" data-sly-test.summary="${properties.showStockDetails}">
+	      	<ul class="column1">
+	  	 	   <li>Request Date: November 13, 2018</li>
+	  	       <li>Open Price: 300</li>
+	  	       <li>Range High: 303</li>
+	        </ul>   
+	      	<ul class="column2">
+	 	       <li>Range Low: 299</li>
+	 	       <li>Close: 303</li>
+	  	       <li>Volume: 30000</li>
+	        </ul>
+	   </div>
+</div>
+
+<!-- If there is no stock symbol added to the dialog, create a component placeholder -->
+<sly data-sly-call="${template.placeholder @ isEmpty=!symbol, classAppend='cmp-stockplex'}"></sly>

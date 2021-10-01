@@ -1,0 +1,10 @@
+ui.apps immutable-training-code content package filters
+ * /apps/training
+ * /apps/cq/core/content/nav
+
+
+ui.content mutable-training-code content package filters
+ * /content/we-train
+ * /content/helloworld
+ * /conf/we-train
+ * /content/experience-fragments/site_fragments (if you installed XF example)
