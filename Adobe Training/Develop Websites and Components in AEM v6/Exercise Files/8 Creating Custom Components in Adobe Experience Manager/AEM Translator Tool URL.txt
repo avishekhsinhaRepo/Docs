@@ -1,3 +1,0 @@
-AEM Translator Tool URL:
-
-http://localhost:4502/libs/cq/i18n/translator.html
