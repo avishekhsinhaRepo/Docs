@@ -1,0 +1,3 @@
+ProductCode, ProductName, ProductGroup
+1,"Reynolds Pen","Pen"
+2,"Apsara Pensil","Apsara"
