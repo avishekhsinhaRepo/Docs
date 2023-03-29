@@ -36,3 +36,27 @@ C:\Work\Udemy_2020\DP-203\2. Design and Develop Data Processing\Azure Event Hubs
 C:\Work\Udemy_2020\DP-203\2. Design and Develop Data Processing\Azure Event Hubs and Stream Analytics\3. Sending and Receiving Events\AzureEventHub-Send\AzureEventHub-Send\obj\Debug\netcoreapp3.1\AzureEventHub-Send.dll
 C:\Work\Udemy_2020\DP-203\2. Design and Develop Data Processing\Azure Event Hubs and Stream Analytics\3. Sending and Receiving Events\AzureEventHub-Send\AzureEventHub-Send\obj\Debug\netcoreapp3.1\AzureEventHub-Send.pdb
 C:\Work\Udemy_2020\DP-203\2. Design and Develop Data Processing\Azure Event Hubs and Stream Analytics\3. Sending and Receiving Events\AzureEventHub-Send\AzureEventHub-Send\obj\Debug\netcoreapp3.1\AzureEventHub-Send.genruntimeconfig.cache
+C:\Users\asinha37\AviRepo\Docs\Azure-DP-203\resources\AzureEventHub-Send\AzureEventHub-Send\AzureEventHub-Send\obj\Debug\netcoreapp3.1\AzureEventHub-Send.dll
+C:\Users\asinha37\AviRepo\Docs\Azure-DP-203\resources\AzureEventHub-Send\AzureEventHub-Send\AzureEventHub-Send\obj\Debug\netcoreapp3.1\AzureEventHub-Send.pdb
+C:\Users\asinha37\AviRepo\Docs\Azure-DP-203\resources\AzureEventHub-Send\AzureEventHub-Send\AzureEventHub-Send\bin\Debug\netcoreapp3.1\AzureEventHub-Send.exe
+C:\Users\asinha37\AviRepo\Docs\Azure-DP-203\resources\AzureEventHub-Send\AzureEventHub-Send\AzureEventHub-Send\bin\Debug\netcoreapp3.1\AzureEventHub-Send.deps.json
+C:\Users\asinha37\AviRepo\Docs\Azure-DP-203\resources\AzureEventHub-Send\AzureEventHub-Send\AzureEventHub-Send\bin\Debug\netcoreapp3.1\AzureEventHub-Send.runtimeconfig.json
+C:\Users\asinha37\AviRepo\Docs\Azure-DP-203\resources\AzureEventHub-Send\AzureEventHub-Send\AzureEventHub-Send\bin\Debug\netcoreapp3.1\AzureEventHub-Send.runtimeconfig.dev.json
+C:\Users\asinha37\AviRepo\Docs\Azure-DP-203\resources\AzureEventHub-Send\AzureEventHub-Send\AzureEventHub-Send\bin\Debug\netcoreapp3.1\AzureEventHub-Send.dll
+C:\Users\asinha37\AviRepo\Docs\Azure-DP-203\resources\AzureEventHub-Send\AzureEventHub-Send\AzureEventHub-Send\bin\Debug\netcoreapp3.1\AzureEventHub-Send.pdb
+C:\Users\asinha37\AviRepo\Docs\Azure-DP-203\resources\AzureEventHub-Send\AzureEventHub-Send\AzureEventHub-Send\bin\Debug\netcoreapp3.1\Azure.Core.dll
+C:\Users\asinha37\AviRepo\Docs\Azure-DP-203\resources\AzureEventHub-Send\AzureEventHub-Send\AzureEventHub-Send\bin\Debug\netcoreapp3.1\Azure.Core.Amqp.dll
+C:\Users\asinha37\AviRepo\Docs\Azure-DP-203\resources\AzureEventHub-Send\AzureEventHub-Send\AzureEventHub-Send\bin\Debug\netcoreapp3.1\Azure.Messaging.EventHubs.dll
+C:\Users\asinha37\AviRepo\Docs\Azure-DP-203\resources\AzureEventHub-Send\AzureEventHub-Send\AzureEventHub-Send\bin\Debug\netcoreapp3.1\Microsoft.Azure.Amqp.dll
+C:\Users\asinha37\AviRepo\Docs\Azure-DP-203\resources\AzureEventHub-Send\AzureEventHub-Send\AzureEventHub-Send\bin\Debug\netcoreapp3.1\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\asinha37\AviRepo\Docs\Azure-DP-203\resources\AzureEventHub-Send\AzureEventHub-Send\AzureEventHub-Send\bin\Debug\netcoreapp3.1\System.Memory.Data.dll
+C:\Users\asinha37\AviRepo\Docs\Azure-DP-203\resources\AzureEventHub-Send\AzureEventHub-Send\AzureEventHub-Send\bin\Debug\netcoreapp3.1\System.Text.Encodings.Web.dll
+C:\Users\asinha37\AviRepo\Docs\Azure-DP-203\resources\AzureEventHub-Send\AzureEventHub-Send\AzureEventHub-Send\bin\Debug\netcoreapp3.1\System.Text.Json.dll
+C:\Users\asinha37\AviRepo\Docs\Azure-DP-203\resources\AzureEventHub-Send\AzureEventHub-Send\AzureEventHub-Send\bin\Debug\netcoreapp3.1\System.Threading.Channels.dll
+C:\Users\asinha37\AviRepo\Docs\Azure-DP-203\resources\AzureEventHub-Send\AzureEventHub-Send\AzureEventHub-Send\obj\Debug\netcoreapp3.1\AzureEventHub-Send.csproj.AssemblyReference.cache
+C:\Users\asinha37\AviRepo\Docs\Azure-DP-203\resources\AzureEventHub-Send\AzureEventHub-Send\AzureEventHub-Send\obj\Debug\netcoreapp3.1\AzureEventHub-Send.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\asinha37\AviRepo\Docs\Azure-DP-203\resources\AzureEventHub-Send\AzureEventHub-Send\AzureEventHub-Send\obj\Debug\netcoreapp3.1\AzureEventHub-Send.AssemblyInfoInputs.cache
+C:\Users\asinha37\AviRepo\Docs\Azure-DP-203\resources\AzureEventHub-Send\AzureEventHub-Send\AzureEventHub-Send\obj\Debug\netcoreapp3.1\AzureEventHub-Send.AssemblyInfo.cs
+C:\Users\asinha37\AviRepo\Docs\Azure-DP-203\resources\AzureEventHub-Send\AzureEventHub-Send\AzureEventHub-Send\obj\Debug\netcoreapp3.1\AzureEventHub-Send.csproj.CoreCompileInputs.cache
+C:\Users\asinha37\AviRepo\Docs\Azure-DP-203\resources\AzureEventHub-Send\AzureEventHub-Send\AzureEventHub-Send\obj\Debug\netcoreapp3.1\AzureEventHub-Send.csproj.CopyComplete
+C:\Users\asinha37\AviRepo\Docs\Azure-DP-203\resources\AzureEventHub-Send\AzureEventHub-Send\AzureEventHub-Send\obj\Debug\netcoreapp3.1\AzureEventHub-Send.genruntimeconfig.cache

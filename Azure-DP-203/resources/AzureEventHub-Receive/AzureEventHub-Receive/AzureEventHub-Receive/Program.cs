@@ -1,4 +1,6 @@
-﻿using Azure.Messaging.EventHubs.Consumer;
+﻿using Azure.Messaging.EventHubs;
+using Azure.Messaging.EventHubs.Consumer;
+using Azure.Messaging.EventHubs.Producer;
 using System;
 using System.Text;
 using System.Threading.Tasks;
@@ -7,11 +9,15 @@ namespace AzureEventHub_Receive
 {
     class Program
     {
-        private static string connection_string = "Endpoint=sb://appnamespace45667.servicebus.windows.net/;SharedAccessKeyName=Listen;SharedAccessKey=hYzR6jQpyp0FKLG0xHwUEx6YqX9se3Wo2g8x67DI9sU=;EntityPath=apphub";
+        private static string connection_string = "Endpoint=sb://gpdeventhubnamespace.servicebus.windows.net/;SharedAccessKeyName=ListenPolicy;SharedAccessKey=8aHnPxM76J2ulpc5ZboCBjaCTVapsSFdb+AEhA7Tsf8=;EntityPath=gpdeventhub";
         private static string consumer_group="$Default";
+        private const string eventHubName = "gpdeventhub";
         static async Task Main(string[] args)
         {
-            EventHubConsumerClient _client = new EventHubConsumerClient(consumer_group, connection_string);
+            var options = new EventHubConsumerClientOptions();
+            options.ConnectionOptions.TransportType = EventHubsTransportType.AmqpWebSockets;
+
+            EventHubConsumerClient _client = new EventHubConsumerClient(consumer_group, connection_string,options);
 
             await foreach(PartitionEvent _event in _client.ReadEventsAsync())
             {

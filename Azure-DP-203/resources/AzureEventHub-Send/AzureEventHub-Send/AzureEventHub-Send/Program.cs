@@ -1,4 +1,5 @@
-﻿using Azure.Messaging.EventHubs.Producer;
+﻿using Azure.Messaging.EventHubs;
+using Azure.Messaging.EventHubs.Producer;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -7,11 +8,13 @@ namespace AzureEventHub_Send
 {
     class Program
     {
-        private static string connection_string = "Endpoint=sb://appnamespace45667.servicebus.windows.net/;SharedAccessKeyName=Send;SharedAccessKey=iSI/Su30pcN+4iJgbetiiaZg6t0DXTy+Ji8HMw2vvtM=;EntityPath=apphub";
+        private static string connection_string = "Endpoint=sb://gpdeventhubnamespace.servicebus.windows.net/;SharedAccessKeyName=SendPolicy;SharedAccessKey=PEV05uUiTshCd/w9jH+GHQCg2tBY5Rqyw+AEhJgHvaU=";
+        private const string eventHubName = "gpdeventhub";
         static void Main(string[] args)
         {
-
-            EventHubProducerClient _client = new EventHubProducerClient(connection_string);
+            var options = new EventHubProducerClientOptions();
+            options.ConnectionOptions.TransportType = EventHubsTransportType.AmqpWebSockets;
+            EventHubProducerClient _client = new EventHubProducerClient(connection_string,eventHubName,options);
 
             EventDataBatch _batch = _client.CreateBatchAsync().GetAwaiter().GetResult();
 
