@@ -1,0 +1,19 @@
+AZ Command Example
+-----------------------------
+1. CREATING A CONTAINER
+azcopy make "https://avistgacc.blob.core.windows.net/mycontainer?sv=2022-11-02&ss=b&srt=sco&sp=rwlactf&se=2023-05-08T21:37:20Z&st=2023-05-08T13:37:20Z&spr=https&sig=H6NZmBBpwDpNPMW4jlGnpPN6DNWa3rJRW%2FlDu%2Fi%2FVbc%3D"
+
+2. UPLOAD/ COPY LOCAL FILES/FOLDERS To CONTAINER
+azcopy copy "." "https://avistgacc.blob.core.windows.net/mycontainer?sv=2022-11-02&ss=b&srt=sco&sp=rwlactf&se=2023-05-08T21:37:20Z&st=2023-05-08T13:37:20Z&spr=https&sig=H6NZmBBpwDpNPMW4jlGnpPN6DNWa3rJRW%2FlDu%2Fi%2FVbc%3D"
+
+3. LIST FILES IN A CONTAINER
+azcopy list "https://avistgacc.blob.core.windows.net/mycontainer?sv=2022-11-02&ss=b&srt=sco&sp=rwlactf&se=2023-05-08T21:37:20Z&st=2023-05-08T13:37:20Z&spr=https&sig=H6NZmBBpwDpNPMW4jlGnpPN6DNWa3rJRW%2FlDu%2Fi%2FVbc%3D"
+
+4. DOWNLOAD BLOBS
+Note : Docs/Interview.txt - Is the name of the folder/filename
+
+azcopy copy "https://avistgacc.blob.core.windows.net/mycontainer/Docs/Interview.txt?sv=2022-11-02&ss=b&srt=sco&sp=rwlactf&se=2023-05-08T21:37:20Z&st=2023-05-08T13:37:20Z&spr=https&sig=H6NZmBBpwDpNPMW4jlGnpPN6DNWa3rJRW%2FlDu%2Fi%2FVbc%3D" "Interview.txt"
+
+5 COPY DATA FROM ONE CONTAINER TO ANOTHER IN STORAGE ACCOUNT
+
+azcopy copy "https://avistgacc.blob.core.windows.net/mycontainer?sv=2022-11-02&ss=b&srt=sco&sp=rwlactf&se=2023-05-08T21:37:20Z&st=2023-05-08T13:37:20Z&spr=https&sig=H6NZmBBpwDpNPMW4jlGnpPN6DNWa3rJRW%2FlDu%2Fi%2FVbc%3D" "https://avistgacc.blob.core.windows.net/data?sv=2022-11-02&ss=b&srt=sco&sp=rwlactf&se=2023-05-08T21:37:20Z&st=2023-05-08T13:37:20Z&spr=https&sig=H6NZmBBpwDpNPMW4jlGnpPN6DNWa3rJRW%2FlDu%2Fi%2FVbc%3D"
