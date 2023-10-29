@@ -1,0 +1,9 @@
+1. Have two file servers with path to sync (eg. F:/shared) and add test files
+2. Deploy storage account and create a file share 
+3. Deploy Azure File Sync(Storage Sync SVC) on same region as the storage account
+4. Within Azure Storage Sync, Create sync group and specify the storage + File Share
+5. File shre will be added as cloud endpoint and you need to add server endpoint next
+6. Register file servers by downloading and installing the agent 
+7. Once installed, login to the agent and select the storage sync svc
+8. From Storage Sync Service add server endpoints to the sync group and mention the path that needs to sync
+9. validate the setup by going the servers and file share and see if the files are synced
