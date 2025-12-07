@@ -1,0 +1,108 @@
+{
+  "openapi": "3.0.3",
+  "info": {
+    "title": "TMDb Discover Movies API",
+    "version": "1.0.0",
+    "description": "OpenAPI JSON for discovering movies using TMDb API with genre and other filters"
+  },
+  "servers": [
+    {
+      "url": "https://api.themoviedb.org/3"
+    }
+  ],
+  "paths": {
+    "/discover/movie": {
+      "get": {
+        "summary": "Discover movies",
+        "description": "Discover movies by genre, release date, popularity and other filters",
+        "parameters": [
+          {
+            "name": "api_key",
+            "in": "query",
+            "required": true,
+            "schema": {"type": "string"},
+            "description": "Your TMDb API key"
+          },
+          {
+            "name": "language",
+            "in": "query",
+            "required": false,
+            "schema": {"type": "string"},
+            "description": "Language code for results"
+          },
+          {
+            "name": "sort_by",
+            "in": "query",
+            "required": false,
+            "schema": {"type": "string"},
+            "description": "Sort order (e.g., popularity.desc, release_date.desc)"
+          },
+          {
+            "name": "page",
+            "in": "query",
+            "required": false,
+            "schema": {"type": "integer"},
+            "description": "Page number of results"
+          },
+          {
+            "name": "with_genres",
+            "in": "query",
+            "required": false,
+            "schema": {"type": "string"},
+            "description": "Comma-separated list of genre IDs to filter movies"
+          },
+          {
+            "name": "include_adult",
+            "in": "query",
+            "required": false,
+            "schema": {"type": "boolean"},
+            "description": "Include adult content (optional)"
+          },
+          {
+            "name": "primary_release_year",
+            "in": "query",
+            "required": false,
+            "schema": {"type": "integer"},
+            "description": "Filter movies by primary release year"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful movie discovery",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "page": {"type": "integer"},
+                    "results": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "id": {"type": "integer"},
+                          "title": {"type": "string"},
+                          "overview": {"type": "string"},
+                          "release_date": {"type": "string"},
+                          "vote_average": {"type": "number"},
+                          "genre_ids": {
+                            "type": "array",
+                            "items": {"type": "integer"}
+                          }
+                        }
+                      }
+                    },
+                    "total_pages": {"type": "integer"},
+                    "total_results": {"type": "integer"}
+                  }
+                }
+              }
+            }
+          },
+          "401": {"description": "Unauthorized – Invalid API key"},
+          "404": {"description": "Not Found"}
+        }
+      }
+    }
+  }
+}
